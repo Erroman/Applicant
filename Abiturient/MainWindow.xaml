@@ -16,7 +16,7 @@
                 <RibbonButton SmallImageSource="Images\help.png" />
             </Ribbon.HelpPaneContent>
             <!-- Quick Access Toolbar - located at the upper-left corner -->
-            <Ribbon.QuickAccessToolBar>
+            <!--Ribbon.QuickAccessToolBar>
                 <RibbonQuickAccessToolBar>
                     <RibbonButton x:Name ="Save" SmallImageSource="Images\save.png" />
                     <RibbonSplitButton x:Name ="Undo" SmallImageSource="Images\undo.png" >
@@ -29,7 +29,7 @@
                         <RibbonSplitMenuItem Header="Redo 2" />
                     </RibbonSplitButton>
                 </RibbonQuickAccessToolBar>
-            </Ribbon.QuickAccessToolBar>
+            </Ribbon.QuickAccessToolBar-->
             <!-- Application Menu, located at the left-hand side (down arrow) -->
             <Ribbon.ApplicationMenu>
                 <RibbonApplicationMenu KeyTip="F">
