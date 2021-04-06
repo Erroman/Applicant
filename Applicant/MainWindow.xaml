@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Applicant"
         mc:Ignorable="d"
-        Title="MainWindow">
+        Title="Автоматизированная информационная система &quot;Абитуриент&quot;">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -20,50 +20,32 @@
             </Ribbon.HelpPaneContent>
 
             <Ribbon.ApplicationMenu>
-                <RibbonApplicationMenu KeyTip="F">
-                    <RibbonApplicationMenuItem Header="Options" />
-                    <RibbonApplicationMenuItem Header="Exit" />
+                <RibbonApplicationMenu>
+                    <RibbonApplicationMenuItem Header="Настройки" />
+                    <RibbonApplicationMenuItem Header="Выход из программы" />
                 </RibbonApplicationMenu>
             </Ribbon.ApplicationMenu>
 
             <!-- Ribbon Tab #1: Home -->
-            <RibbonTab Header="Home" KeyTip="H" >
+            <RibbonTab Header="Список поступающих">
 
                 <!-- Home  group-->
-                <RibbonGroup x:Name="ClipboardGroup" Header="Home">
-                    <RibbonMenuButton  Label="Paste" KeyTip="V">
-                        <RibbonMenuItem  Header="Keep Text Only" KeyTip="T"/>
-                        <RibbonMenuItem  Header="Paste Special..." KeyTip="S"/>
-                    </RibbonMenuButton>
-                    <RibbonButton  Label="Cut" KeyTip="X" />
-                    <RibbonButton  Label="Copy" KeyTip="C" />
-                    <RibbonButton  Label="Format Painter" KeyTip="FP" />
+                <RibbonGroup x:Name="ClipboardGroup" Header="Список поступающих">
                 </RibbonGroup>
 
-                <!-- Employee And Payroll group-->
-                <RibbonGroup x:Name="Employee" Header="Employee And Payroll">
-                    <RibbonMenuButton   Label="Employee" KeyTip="V">
-                        <RibbonMenuItem  Header="Keep Text Only" KeyTip="T"/>
-                        <RibbonMenuItem  Header="Paste Special..." KeyTip="S"/>
-                    </RibbonMenuButton>
-                    <RibbonButton  Label="Save" KeyTip="X" />
-                    <RibbonButton  Label="Add" KeyTip="C" />
-
-                </RibbonGroup>
-
+  
             </RibbonTab>
 
             <!-- Ribbon Tab #2: Launch -->
-            <RibbonTab Header="Insert" KeyTip="I">
+            <RibbonTab Header="Личные данные" KeyTip="I">
                 <!-- Launch/Applications group-->
+                <!-- Employee And Payroll group-->
+                <RibbonGroup x:Name="Employee" Header="Подробные сведения о поступающих в наш колледж">
+                </RibbonGroup>
 
 
             </RibbonTab>
 
-            <RibbonTab Header="PageLayout" KeyTip="L">
-                <!-- Launch/Applications group-->
-
-            </RibbonTab>
         </Ribbon>
         <Grid Grid.Row="1">
             <!--Defined GridRow-->
@@ -75,6 +57,14 @@
                 <RowDefinition Height="Auto"></RowDefinition>
                 <RowDefinition Height="Auto"></RowDefinition>
                 <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+
+
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"></RowDefinition>
                 <RowDefinition Height="Auto"></RowDefinition>
@@ -92,7 +82,7 @@
             <StackPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3">
                 <Label Content="Информация о поступающих в Верхнесалдинский металлургический  колледж" FontSize="20" ></Label>
                 <Canvas  >
-                    <Path Height="5" Stroke="Red" Width="250" Canvas.Top="-5" Canvas.Left="5"
+                    <Path Height="5" Stroke="Red" Width="730" Canvas.Top="-5" Canvas.Left="5"
           Stretch="Fill"  StrokeThickness="5" Fill="Blue" Data="M61,125 L193,28"/>
 
 
@@ -107,28 +97,28 @@
             <Label Content="Год окончания школы" Grid.Column="0" Grid.Row="5" Margin="5"></Label>
             <Label Content="Какую школу закончил" Grid.Column="0" Grid.Row="6" Margin="5"></Label>
             <Label Content="Избранная специальность" Grid.Column="0" Grid.Row="7"  Margin="5"></Label>
-            <Label Content="Код группы" Grid.Column="0" Grid.Row="7"  Margin="5"></Label>
-            <Label Content="Балл ЕГЭ" Grid.Column="0" Grid.Row="7"  Margin="5"></Label>
+            <Label Content="Код группы" Grid.Column="0" Grid.Row="8"  Margin="8"></Label>
+            <Label Content="Балл ЕГЭ" Grid.Column="0" Grid.Row="9"  Margin="9"></Label>
 
             <!--Second Column Content-->
 
-            <TextBox Name="txtEmpId" Grid.Column="1" Grid.Row="1" Margin="5"></TextBox>
+            <TextBox Name="txtSurname" Grid.Column="1" Grid.Row="1" Margin="5"></TextBox>
             <TextBox Name="txtFirstName" Grid.Column="1" Grid.Row="2" Margin="5"></TextBox>
-            <TextBox Name="txtCity" Grid.Column="1" Grid.Row="3" Margin="5"></TextBox>
-            <ComboBox Name="txtState" Grid.Column="1" Grid.Row="4" Margin="5"></ComboBox>
-            <TextBox Name="txtAddresh"  Grid.Column="1" Grid.Row="5" Margin="5"></TextBox>
-            <TextBox Name="txtMailingaddress"  Grid.Column="1" Grid.Row="6" Margin="5"></TextBox>
+            <TextBox Name="txtPatronimic" Grid.Column="1" Grid.Row="3" Margin="5"></TextBox>
+            <ComboBox Name="txtYearOfBirth" Grid.Column="1" Grid.Row="4" Margin="5"></ComboBox>
+            <TextBox Name="txtYearOfGraduation"  Grid.Column="1" Grid.Row="5" Margin="5"></TextBox>
+            <TextBox Name="txtGraduatedScool"  Grid.Column="1" Grid.Row="6" Margin="5"></TextBox>
+            <TextBox Name="txtChosenSpeciality"  Grid.Column="1" Grid.Row="7" Margin="5"></TextBox>
+            <TextBox Name="txtStudyGroupCode"  Grid.Column="1" Grid.Row="8" Margin="5"></TextBox>
+            <TextBox Name="txtEGEGrade"  Grid.Column="1" Grid.Row="9" Margin="5"></TextBox>
 
             <!--Stack Panel Horizental orientation-->
 
-            <StackPanel Grid.Column="1" Grid.Row="7" Margin="5" Orientation="Horizontal">
-                <RadioButton Margin="0,0,10,0">Male</RadioButton>
-                <RadioButton >Female</RadioButton>
-            </StackPanel>
+           
 
             <!--Wrap Panel List of button by default hoizental-->
 
-            <WrapPanel Grid.Column="0" Margin="80,0,0,0" Grid.Row="8" Grid.ColumnSpan="4">
+            <WrapPanel Grid.Column="0" Margin="80,0,0,0" Grid.Row="10" Grid.ColumnSpan="4">
                 <Button Content="Сохранить" Width="70" Height="24" Margin="5"></Button>
                 <Button Content="Удалить" Width="70" Height="24" Margin="5"></Button>
                 <Button Content="Изменить" Width="70" Height="24" Margin="5"></Button>
@@ -138,13 +128,17 @@
 
             <!--DataGrid for Show the Employee Info-->
 
-            <DataGrid Grid.Row="9" Grid.ColumnSpan="4" Grid.Column="0" Margin="5">
+            <DataGrid Grid.Row="11" Grid.ColumnSpan="4" Grid.Column="0" Margin="5">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Фамилия"></DataGridTextColumn>
                     <DataGridTextColumn Header="Имя"></DataGridTextColumn>
                     <DataGridTextColumn Header="Отчество"></DataGridTextColumn>
-                    <DataGridTextColumn Header="Специальность"></DataGridTextColumn>
-                    <DataGridTextColumn Header="Средний бал ЕГЭ"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Год рождения"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Год окончания школы"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Какую школу закончил"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Избранная специальность"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Код группы"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Балл ЕГЭ"></DataGridTextColumn>
 
                 </DataGrid.Columns>
             </DataGrid>
