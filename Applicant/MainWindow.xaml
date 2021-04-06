@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Applicant"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -18,7 +18,7 @@
             <Ribbon.HelpPaneContent>
                 <RibbonButton />
             </Ribbon.HelpPaneContent>
-    
+
             <Ribbon.ApplicationMenu>
                 <RibbonApplicationMenu KeyTip="F">
                     <RibbonApplicationMenuItem Header="Options" />
@@ -90,7 +90,7 @@
 
             <!--Stack Panel by Default Verticale-->
             <StackPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3">
-                <Label Content="Employee Info Systems" FontSize="20" ></Label>
+                <Label Content="Информация о поступающих в Верхнесалдинский металлургический  колледж" FontSize="20" ></Label>
                 <Canvas  >
                     <Path Height="5" Stroke="Red" Width="250" Canvas.Top="-5" Canvas.Left="5"
           Stretch="Fill"  StrokeThickness="5" Fill="Blue" Data="M61,125 L193,28"/>
@@ -100,13 +100,15 @@
             </StackPanel>
             <!--First Column Content-->
 
-            <Label Content="EmployeeID" Grid.Column="0" Grid.Row="1" Margin="5"></Label>
-            <Label Content="FirstName" Grid.Column="0" Grid.Row="2" Margin="5"></Label>
-            <Label Content="City" Grid.Column="0" Grid.Row="3" Margin="5"></Label>
-            <Label Content="State" Grid.Column="0" Grid.Row="4" Margin="5"></Label>
-            <Label Content="CurrentAddress" Grid.Column="0" Grid.Row="5" Margin="5"></Label>
-            <Label Content="MailingAddress" Grid.Column="0" Grid.Row="6" Margin="5"></Label>
-            <Label Content="Sex" Grid.Column="0" Grid.Row="7"  Margin="5"></Label>
+            <Label Content="Фамилия" Grid.Column="0" Grid.Row="1" Margin="5"></Label>
+            <Label Content="Имя" Grid.Column="0" Grid.Row="2" Margin="5"></Label>
+            <Label Content="Отчество" Grid.Column="0" Grid.Row="3" Margin="5"></Label>
+            <Label Content="Год рождения" Grid.Column="0" Grid.Row="4" Margin="5"></Label>
+            <Label Content="Год окончания школы" Grid.Column="0" Grid.Row="5" Margin="5"></Label>
+            <Label Content="Какую школу закончил" Grid.Column="0" Grid.Row="6" Margin="5"></Label>
+            <Label Content="Избранная специальность" Grid.Column="0" Grid.Row="7"  Margin="5"></Label>
+            <Label Content="Код группы" Grid.Column="0" Grid.Row="7"  Margin="5"></Label>
+            <Label Content="Балл ЕГЭ" Grid.Column="0" Grid.Row="7"  Margin="5"></Label>
 
             <!--Second Column Content-->
 
@@ -127,24 +129,22 @@
             <!--Wrap Panel List of button by default hoizental-->
 
             <WrapPanel Grid.Column="0" Margin="80,0,0,0" Grid.Row="8" Grid.ColumnSpan="4">
-                <Button Content="Save" Width="70" Height="24" Margin="5"></Button>
-                <Button Content="Delete" Width="70" Height="24" Margin="5"></Button>
-                <Button Content="Edit" Width="70" Height="24" Margin="5"></Button>
-                <Button Content="Pivous"  Width="70" Height="24" Margin="5"></Button>
-                <Button Content="Next" Width="70" Height="24" Margin="5"></Button>
+                <Button Content="Сохранить" Width="70" Height="24" Margin="5"></Button>
+                <Button Content="Удалить" Width="70" Height="24" Margin="5"></Button>
+                <Button Content="Изменить" Width="70" Height="24" Margin="5"></Button>
+                <Button Content="Предыдущий студент"  Width="141" Height="24"/>
+                <Button Content="Следующий студент" Width="132" Height="24"/>
             </WrapPanel>
 
             <!--DataGrid for Show the Employee Info-->
 
             <DataGrid Grid.Row="9" Grid.ColumnSpan="4" Grid.Column="0" Margin="5">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="EmployeeID"></DataGridTextColumn>
-                    <DataGridTextColumn Header="FirstName"></DataGridTextColumn>
-                    <DataGridTextColumn Header="LastName"></DataGridTextColumn>
-                    <DataGridTextColumn Header="City"></DataGridTextColumn>
-                    <DataGridTextColumn Header="State"></DataGridTextColumn>
-                    <DataGridTextColumn Header="Country"></DataGridTextColumn>
-                    <DataGridTextColumn Header="Status"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Фамилия"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Имя"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Отчество"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Специальность"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Средний бал ЕГЭ"></DataGridTextColumn>
 
                 </DataGrid.Columns>
             </DataGrid>
