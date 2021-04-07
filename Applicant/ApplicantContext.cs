@@ -10,5 +10,10 @@ namespace CollegeApplicants
     class ApplicantContext:DbContext
     {
         public DbSet<Applicant> Applicants { get; set; }
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=Test");
+        }
     }
+
 }
