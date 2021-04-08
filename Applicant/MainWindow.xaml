@@ -106,12 +106,13 @@
             <TextBox Name="txtNumber" Grid.Column="1" Grid.Row="1" Margin="5"></TextBox>
             <TextBox Name="txtSurname" Grid.Column="1" Grid.Row="1" Margin="5"></TextBox>
             <TextBox Name="txtFirstName" Grid.Column="1" Grid.Row="2" Margin="5"></TextBox>
+            <TextBox Name="txtGivenName" Grid.Column="1" Grid.Row="2" Margin="5"></TextBox>
             <TextBox Name="txtPatronimic" Grid.Column="1" Grid.Row="3" Margin="5"></TextBox>
             <ComboBox Name="txtYearOfBirth" Grid.Column="1" Grid.Row="4" Margin="5"></ComboBox>
             <TextBox Name="txtYearOfGraduation"  Grid.Column="1" Grid.Row="5" Margin="5"></TextBox>
-            <TextBox Name="txtGraduatedScool"  Grid.Column="1" Grid.Row="6" Margin="5"></TextBox>
+            <TextBox Name="txtGraduatedSchool"  Grid.Column="1" Grid.Row="6" Margin="5"></TextBox>
             <TextBox Name="txtChosenSpeciality"  Grid.Column="1" Grid.Row="7" Margin="5"></TextBox>
-            <TextBox Name="txtStudyGroupCode"  Grid.Column="1" Grid.Row="8" Margin="5"></TextBox>
+            <TextBox Name="txtCodeOfClass"  Grid.Column="1" Grid.Row="8" Margin="5"></TextBox>
             <TextBox Name="txtEGEGrade"  Grid.Column="1" Grid.Row="9" Margin="5"></TextBox>
 
             <!--Stack Panel Horizental orientation-->
@@ -134,14 +135,15 @@
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="№" Binding="{Binding ApplicantId}"></DataGridTextColumn>
                     <DataGridTextColumn Header="Фамилия" Binding="{Binding Surname}"></DataGridTextColumn>
-                    <DataGridTextColumn Header="Имя"></DataGridTextColumn>
-                    <DataGridTextColumn Header="Отчество"></DataGridTextColumn>
-                    <DataGridTextColumn Header="Год рождения"></DataGridTextColumn>
-                    <DataGridTextColumn Header="Год окончания школы"></DataGridTextColumn>
-                    <DataGridTextColumn Header="Какую школу закончил"></DataGridTextColumn>
-                    <DataGridTextColumn Header="Избранная специальность"></DataGridTextColumn>
-                    <DataGridTextColumn Header="Код группы"></DataGridTextColumn>
-                    <DataGridTextColumn Header="Балл ЕГЭ"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Имя" Binding="{Binding GivenName}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Отчество" Binding="{Binding Patronimic}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Год рождения" Binding="{Binding YearOfBirth}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Год окончания школы" Binding="{Binding Surname}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Какую школу закончил" Binding="{Binding YearOfGraduation}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Какую школу закончил" Binding="{Binding GraduatedSchool}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Избранная специальность" Binding="{Binding ChosenSpeciality}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Код группы" Binding="{Binding CodeOfClass}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Балл ЕГЭ" Binding="{Binding GradeOfEGE}"></DataGridTextColumn>
 
                 </DataGrid.Columns>
             </DataGrid>

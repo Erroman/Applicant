@@ -15,9 +15,10 @@ namespace CollegeApplicants
         public string Patronimic { get; set; }
         public string YearOfBirth { get; set; }
         public string YearOfGraduation { get; set; }
+        public string GraduatedSchool { get; set; }
         public string ChosenSpeciality { get; set; }
         public string CodeOfClass { get; set; }
-        public string GradeOfEGE { get; set; }
+        public string EGEGrade { get; set; }
 
 
 

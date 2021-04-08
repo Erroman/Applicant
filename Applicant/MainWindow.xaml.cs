@@ -37,7 +37,18 @@ namespace CollegeApplicants
         {
             using (var context = new ApplicantContext())
             {
-                var newApplicant = new Applicant() { Surname = this.txtSurname.Text };
+                var newApplicant = new Applicant() 
+                {
+                    Surname = txtSurname.Text,
+                    GivenName = txtGivenName.Text,
+                    Patronimic = txtPatronimic.Text,
+                    YearOfBirth = txtYearOfBirth.Text,
+                    YearOfGraduation = txtYearOfGraduation.Text,
+                    GraduatedSchool= txtGraduatedSchool.Text,
+                    ChosenSpeciality=txtChosenSpeciality.Text,
+                    CodeOfClass=txtCodeOfClass.Text,
+                    EGEGrade = txtEGEGrade.Text
+                };
                 context.Applicants.Add(newApplicant);
                 context.SaveChanges();
             }
