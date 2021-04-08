@@ -28,5 +28,15 @@ namespace CollegeApplicants
                 context.Database.EnsureCreated();
             }
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            using (var context = new ApplicantContext())
+            {
+                var newApplicant = new Applicant() { Surname = this.txtSurname.Text };
+                context.Applicants.Add(newApplicant);
+                context.SaveChanges();
+            }
+        }
     }
 }

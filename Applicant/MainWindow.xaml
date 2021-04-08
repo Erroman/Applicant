@@ -119,7 +119,7 @@
             <!--Wrap Panel List of button by default hoizental-->
 
             <WrapPanel Grid.Column="0" Margin="80,0,0,0" Grid.Row="10" Grid.ColumnSpan="4">
-                <Button Content="Сохранить" Width="70" Height="24" Margin="5"></Button>
+                <Button Content="Сохранить" Width="70" Height="24" Margin="5" Click="Button_Click"></Button>
                 <Button Content="Удалить" Width="70" Height="24" Margin="5"></Button>
                 <Button Content="Изменить" Width="70" Height="24" Margin="5"></Button>
                 <Button Content="Предыдущий студент"  Width="141" Height="24"/>
