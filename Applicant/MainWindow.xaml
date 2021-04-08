@@ -108,7 +108,7 @@
             <TextBox Name="txtFirstName" Grid.Column="1" Grid.Row="2" Margin="5"></TextBox>
             <TextBox Name="txtGivenName" Grid.Column="1" Grid.Row="2" Margin="5"></TextBox>
             <TextBox Name="txtPatronimic" Grid.Column="1" Grid.Row="3" Margin="5"></TextBox>
-            <ComboBox Name="txtYearOfBirth" Grid.Column="1" Grid.Row="4" Margin="5"></ComboBox>
+            <TextBox Name="txtYearOfBirth" Grid.Column="1" Grid.Row="4" Margin="5"></TextBox>
             <TextBox Name="txtYearOfGraduation"  Grid.Column="1" Grid.Row="5" Margin="5"></TextBox>
             <TextBox Name="txtGraduatedSchool"  Grid.Column="1" Grid.Row="6" Margin="5"></TextBox>
             <TextBox Name="txtChosenSpeciality"  Grid.Column="1" Grid.Row="7" Margin="5"></TextBox>
@@ -143,7 +143,7 @@
                     <DataGridTextColumn Header="Какую школу закончил" Binding="{Binding GraduatedSchool}"></DataGridTextColumn>
                     <DataGridTextColumn Header="Избранная специальность" Binding="{Binding ChosenSpeciality}"></DataGridTextColumn>
                     <DataGridTextColumn Header="Код группы" Binding="{Binding CodeOfClass}"></DataGridTextColumn>
-                    <DataGridTextColumn Header="Балл ЕГЭ" Binding="{Binding GradeOfEGE}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Балл ЕГЭ" Binding="{Binding EGEGrade}"></DataGridTextColumn>
 
                 </DataGrid.Columns>
             </DataGrid>
