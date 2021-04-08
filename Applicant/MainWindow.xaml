@@ -6,6 +6,9 @@
         xmlns:local="clr-namespace:Applicant"
         mc:Ignorable="d"
         Title="Автоматизированная информационная система &quot;Абитуриент&quot;">
+    <Window.Resources>
+        <CollectionViewSource x:Key="applicantViewSource"/>
+    </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
