@@ -23,7 +23,10 @@ namespace CollegeApplicants
         public MainWindow()
         {
             InitializeComponent();
-            using (var context = new ApplicantContext()) { }
+            using (var context = new ApplicantContext()) 
+            {
+                context.Database.EnsureCreated();
+            }
         }
     }
 }

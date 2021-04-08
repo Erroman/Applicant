@@ -12,7 +12,7 @@ namespace CollegeApplicants
         public DbSet<Applicant> Applicants { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=Test");
+            optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=AviaMetallurgical College");
         }
     }
 
