@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Applicant"
         mc:Ignorable="d"
-        Title="Автоматизированная информационная система &quot;Абитуриент&quot;">
+        Title="Автоматизированная информационная система &quot;Абитуриент&quot;" Loaded="Window_Loaded">
     <Window.Resources>
-        <CollectionViewSource x:Key="applicantViewSource"/>
+        <CollectionViewSource x:Key="applicantsViewSource"/>
     </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
@@ -92,7 +92,6 @@
                 </Canvas>
             </StackPanel>
             <!--First Column Content-->
-
             <Label Content="Фамилия" Grid.Column="0" Grid.Row="1" Margin="5"></Label>
             <Label Content="Имя" Grid.Column="0" Grid.Row="2" Margin="5"></Label>
             <Label Content="Отчество" Grid.Column="0" Grid.Row="3" Margin="5"></Label>
@@ -104,7 +103,7 @@
             <Label Content="Балл ЕГЭ" Grid.Column="0" Grid.Row="9"  Margin="9"></Label>
 
             <!--Second Column Content-->
-
+            <TextBox Name="txtNumber" Grid.Column="1" Grid.Row="1" Margin="5"></TextBox>
             <TextBox Name="txtSurname" Grid.Column="1" Grid.Row="1" Margin="5"></TextBox>
             <TextBox Name="txtFirstName" Grid.Column="1" Grid.Row="2" Margin="5"></TextBox>
             <TextBox Name="txtPatronimic" Grid.Column="1" Grid.Row="3" Margin="5"></TextBox>
@@ -131,9 +130,10 @@
 
             <!--DataGrid for Show the Employee Info-->
 
-            <DataGrid Grid.Row="11" Grid.ColumnSpan="4" Grid.Column="0" Margin="5">
+            <DataGrid ItemsSource="{Binding Source={StaticResource applicantsViewSource}}" AutoGenerateColumns="False" Grid.Row="11" Grid.ColumnSpan="4" Grid.Column="0" Margin="5">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Фамилия"></DataGridTextColumn>
+                    <DataGridTextColumn Header="№" Binding="{Binding ApplicantId}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Фамилия" Binding="{Binding Surname}"></DataGridTextColumn>
                     <DataGridTextColumn Header="Имя"></DataGridTextColumn>
                     <DataGridTextColumn Header="Отчество"></DataGridTextColumn>
                     <DataGridTextColumn Header="Год рождения"></DataGridTextColumn>

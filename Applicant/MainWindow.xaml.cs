@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,6 +21,7 @@ namespace CollegeApplicants
     /// </summary>
     public partial class MainWindow : Window
     {
+        private CollectionViewSource applicantsViewSource;
         public MainWindow()
         {
             InitializeComponent();
@@ -27,7 +29,9 @@ namespace CollegeApplicants
             {
                 context.Database.EnsureCreated();
             }
+            applicantsViewSource = (CollectionViewSource)FindResource(nameof(applicantsViewSource));
         }
+
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -36,6 +40,15 @@ namespace CollegeApplicants
                 var newApplicant = new Applicant() { Surname = this.txtSurname.Text };
                 context.Applicants.Add(newApplicant);
                 context.SaveChanges();
+            }
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            using (var context = new ApplicantContext())
+            {
+                context.Applicants.Load<Applicant>();
+                applicantsViewSource.Source = context.Applicants.Local.ToObservableCollection();
             }
         }
     }
