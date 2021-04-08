@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Applicant
+namespace CollegeApplicants
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -23,6 +23,7 @@ namespace Applicant
         public MainWindow()
         {
             InitializeComponent();
+            using (var context = new ApplicantContext()) { }
         }
     }
 }
