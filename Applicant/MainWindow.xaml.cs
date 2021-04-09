@@ -62,5 +62,10 @@ namespace CollegeApplicants
                 applicantsViewSource.Source = context.Applicants.Local.ToObservableCollection();
             }
         }
+
+        private void RibbonApplicationMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
